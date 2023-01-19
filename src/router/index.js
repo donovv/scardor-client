@@ -7,6 +7,11 @@ import SettingsView from '../views/SettingsView.vue';
 import ClassPicker from '../views/ClassPicker.vue';
 import ClassView from '../views/ClassView.vue';
 import ResourceView from '../views/ResourceView.vue';
+import ResourceAdd from '../components/resourceviews/ResourceAddComponent.vue';
+import SpreadSheet from '../components/resourceviews/SSComponent.vue';
+import RedditViewer from '../components/resourceviews/RedditComponent.vue';
+import CustomContent from '../components/resourceviews/CustomContentComponent.vue';
+import YouTube from '../components/resourceviews/YTComponent.vue';
 import NotFound from '../views/NotFound.vue';
 
 const routes = [
@@ -34,6 +39,33 @@ const routes = [
     path: '/resources',
     name: 'resources',
     component: ResourceView,
+    children: [
+      {
+        name: 'spreadsheet',
+        path: 'spreadsheet',
+        component: SpreadSheet,
+      },
+      {
+        name: 'youtube',
+        path: 'youtube',
+        component: YouTube,
+      },
+      {
+        name: 'reddit',
+        path: 'reddit',
+        component: RedditViewer,
+      },
+      {
+        path: 'custom',
+        name: 'custom',
+        component: CustomContent,
+      },
+      {
+        path: 'addnew',
+        name: 'resourceaddnew',
+        component: ResourceAdd,
+      },
+    ],
   },
   {
     path: '/class/:id',

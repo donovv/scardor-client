@@ -92,7 +92,7 @@ export default {
       mainorlegion: 'main',
       levelselector: 'casual',
       searchcriteria: [
-        { name: 'key Input Amount', value: 'keyinput' },
+        { name: 'Key Input Amount', value: 'keyinput' },
         { name: 'Mobility', value: 'mobility' },
         { name: 'Leveling Speed', value: 'levelingspeed' },
         { name: 'Mobbing', value: 'mobbing' },
